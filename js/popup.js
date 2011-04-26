@@ -1,9 +1,9 @@
 var encodeBase = function(inString, base){
-	var output;
+	var output = "";
 	base = parseInt(base);
 	if(base<63)
 		for (var i = 0; i < inString.length; i++) 
-			output += ' ' + inString.charCodeAt(i).toString(base);
+			output +=  inString.charCodeAt(i).toString(base) + " ";
 	else if (base == 64)
 		output = btoa(inString);
 	else
@@ -12,10 +12,10 @@ var encodeBase = function(inString, base){
 }
 
 var decodeBase = function(inString,base){
-	var output;
+	var output = "";
 	base = parseInt(base);
 	if(base<63){
-		var baseArray = base.split(" ")
+		var baseArray = inString.split(" ")
 		for (var i = 0; i < baseArray.length; i ++){
 			output += String.fromCharCode(parseInt(baseArray[i],base).toString(10));
 			}
@@ -33,7 +33,7 @@ $(function() {
 		e.preventDefault();
 		var pushVal = decodeBase($(this).val(),$(this).attr("rel"));
 		$("textarea:not(.selected)").each(function (index, item) {
-			alert($(item).attr("id"))
+			$(item).attr("id","")
 			$(item).val(encodeBase(pushVal,$(item).attr("rel")))
 		});
 		
