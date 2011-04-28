@@ -50,15 +50,36 @@ var decodeBase = function(inString,base){
 
 $(function() {
 	$("textarea").keyup(function(e){
-		$(this).addClass("selected")
+		$("textarea").removeClass("selected");
+		$(this).addClass("selected");
 		e.preventDefault();
 		var pushVal = decodeBase($(this).val(),$(this).attr("rel"));
 		$("textarea:not(.selected)").each(function (index, item) {
-			$(item).attr("id","")
-			$(item).val(encodeBase(pushVal,$(item).attr("rel")))
+			//$(item).attr("id","");
+			$(item).val(encodeBase(pushVal,$(item).attr("rel")));
 		});
 		
 		//changes image
-		$(".b64-imageOutput").attr("src","data:image/png;base64," + $("#b64-base64").val());		
+		var imgType = pushVal.substring(0,3)
+		switch(imgType){
+			case 'Ø¯Ø':
+				imageType = "jpeg";
+				break;
+			case "GIF":
+				imageType = "gif";
+				break;
+			case "PNG":
+				imageType = "png";
+				break;
+			default:
+				imageType = 0;
+		}
+		if (imgType) {
+			$(".bs-imageOutput").attr("src", "data:image/" + imgType + ";base64," + $("#bs-base64").val());
+			$(".bs-imageBox").css('display', 'block');
+		}
+		else {
+			$(".bs-imageBox").css('display', 'none');
+		}	
 	});
 });
