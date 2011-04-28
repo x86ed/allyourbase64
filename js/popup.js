@@ -69,14 +69,14 @@ $(function() {
 		
 		//changes image
 		var imgType = pushVal.substring(0,3);
-			if (imgType == 'د�') {
-				imageType = "jpeg";
+			if (imgType == 'Ø¯Ø') {
+				imgType = "jpeg";
 			}else if (imgType == "GIF") {
-					imageType = "gif";
+					imgType = "gif";
 			}else if (imgType == "PNG") {
-					imageType = "png";
+					imgType = "png";
 			}else {
-					imageType = 0;
+					imgType = 0;
 			}
 		if (imgType) {
 			$(".bs-imageOutput").attr("src", "data:image/" + imgType + ";base64," + $("#bs-base64").val());
