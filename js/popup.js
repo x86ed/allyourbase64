@@ -27,6 +27,10 @@ var encodeBase = function(inString, base){
 			output +=  pad(inString.charCodeAt(i).toString(base), base) + " ";
 	else if (base == 64)
 		output = btoa(inString);
+	else if (base == 80)
+		output = encodeURI(inString);
+	else if (base == 443)
+		output = encodeURIComponent(inString);
 	else
 		output = inString;
 	return output;
@@ -36,12 +40,16 @@ var decodeBase = function(inString,base){
 	var output = "";
 	base = parseInt(base);
 	if(base<63){
-		var baseArray = inString.split(" ")
+		var baseArray = inString.split(" ");
 		for (var i = 0; i < baseArray.length; i ++){
 			output += String.fromCharCode(parseInt(baseArray[i],base).toString(10));
 			}
 	}else if (base == 64){
 		output = atob(inString);
+	}else if (base == 80){
+		output = decodeURI(inString);
+	}else if (base == 443){
+		output = decodeURIComponent(inString);
 	}else{
 		output = inString;
 	}
@@ -60,20 +68,16 @@ $(function() {
 		});
 		
 		//changes image
-		var imgType = pushVal.substring(0,3)
-		switch(imgType){
-			case 'Ø¯Ø':
+		var imgType = pushVal.substring(0,3);
+			if (imgType == 'Ø¯Ø') {
 				imageType = "jpeg";
-				break;
-			case "GIF":
-				imageType = "gif";
-				break;
-			case "PNG":
-				imageType = "png";
-				break;
-			default:
-				imageType = 0;
-		}
+			}else if (imgType == "GIF") {
+					imageType = "gif";
+			}else if (imgType == "PNG") {
+					imageType = "png";
+			}else {
+					imageType = 0;
+			}
 		if (imgType) {
 			$(".bs-imageOutput").attr("src", "data:image/" + imgType + ";base64," + $("#bs-base64").val());
 			$(".bs-imageBox").css('display', 'block');
