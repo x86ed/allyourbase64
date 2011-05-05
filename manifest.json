@@ -1,6 +1,6 @@
 {
   "name" : "All your base64 are belong to us.",
-  "version" : "0.0.64",
+  "version" : "0.65",
   "description" : "Superfast base64 encoder/decoder",
    "browser_action": {
    "default_icon": "icons/icon-19.png",
