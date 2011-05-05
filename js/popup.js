@@ -22,7 +22,7 @@ var pad = function(number, base) {
 var encodeBase = function(inString, base){
 	var output = "";
 	base = parseInt(base);
-	if(base<63)
+	if(base<63 && inString)
 		for (var i = 0; i < inString.length; i++) 
 			output +=  pad(inString.charCodeAt(i).toString(base), base) + " ";
 	else if (base == 64)
@@ -39,7 +39,7 @@ var encodeBase = function(inString, base){
 var decodeBase = function(inString,base){
 	var output = "";
 	base = parseInt(base);
-	if(base<63){
+	if(base<63 && inString){
 		var baseArray = inString.split(" ");
 		for (var i = 0; i < baseArray.length; i ++){
 			output += String.fromCharCode(parseInt(baseArray[i],base).toString(10));
@@ -60,6 +60,7 @@ $(function() {
 	$("textarea").keyup(function(e){
 		$("textarea").removeClass("selected");
 		$(this).addClass("selected");
+        //alert(e.keyCode);
 		e.preventDefault();
 		var pushVal = decodeBase($(this).val(),$(this).attr("rel"));
 		$("textarea:not(.selected)").each(function (index, item) {
