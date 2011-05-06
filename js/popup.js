@@ -23,8 +23,13 @@ var encodeBase = function(inString, base){
 	var output = "";
 	base = parseInt(base);
 	if(base<63 && inString)
-		for (var i = 0; i < inString.length; i++) 
-			output +=  pad(inString.charCodeAt(i).toString(base), base) + " ";
+		for (var i = 0; i < inString.length; i++)
+            if(base == 16)
+                output +=  "&#x" + pad(inString.charCodeAt(i).toString(base), base) + "; ";
+            else if(base == 10)
+                output += "&#" + pad(inString.charCodeAt(i).toString(base), base) + "; ";
+            else
+                output +=  pad(inString.charCodeAt(i).toString(base), base) + " ";
 	else if (base == 64)
 		output = btoa(inString);
 	else if (base == 80)
@@ -42,7 +47,7 @@ var decodeBase = function(inString,base){
 	if(base<63 && inString){
 		var baseArray = inString.split(" ");
 		for (var i = 0; i < baseArray.length; i ++){
-			output += String.fromCharCode(parseInt(baseArray[i],base).toString(10));
+			output += String.fromCharCode(parseInt(baseArray[i].replace(/(&#x|&#)/, ""),base).toString(10));
 			}
 	}else if (base == 64){
 		output = atob(inString);
