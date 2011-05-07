@@ -1,7 +1,8 @@
 var getSText = function(){
   var t = '';
-  if(window.getSelection)
+  if(window.getSelection){
     t = window.getSelection();
+  }
   return t;
 }
 selectedText = ''
@@ -15,7 +16,8 @@ $(function() {
       'you have selected',  // notification title
       selectedText  // notification body text
     );
-    if(window.getSelection)
+    if(window.getSelection){
       notification.show();
+    }
   });
  });
