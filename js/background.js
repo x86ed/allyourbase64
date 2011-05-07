@@ -1,11 +1,11 @@
 var oldVal= "";
 var sendMessageP = true;
-var selectNotify = function(inArray,badgeType){
+var selectNotify = function(inString,badgeType){
   if(sendMessageP){
      var notification = webkitNotifications.createNotification(
         'icons/icon-48.png',  // icon url - can be relative
         'you have selected',  // notification title
-        inArray.value  // notification body text
+        inString  // notification body text
       );
       notification.ondisplay = function(){
         chrome.browserAction.setBadgeBackgroundColor({color: [218 , 17 , 2 , 255]});
