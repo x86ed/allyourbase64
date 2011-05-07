@@ -25,5 +25,5 @@ $(function() {
   });
   
   var allYourContext = chrome.contextMenus.create({title: "Encode selection of type", contexts:['selection']});
-    var stringContext = chrome.contextMenus.create({title: "String", parentId: allYourContext});
+    var stringContext = chrome.contextMenus.create({title: "String", parentId: allYourContext, contexts:['selection']});
 });
