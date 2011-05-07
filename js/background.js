@@ -7,7 +7,7 @@ var selectNotify = function(inArray){
     notification.ondisplay = function(){
       chrome.browserAction.setBadgeBackgroundColor({color: [218 , 17 , 2 , 255]});
       chrome.browserAction.setBadgeText({text:inArray.badge});
-      chrome.browserAction.setPopup({popup: 'popup.html', contexts:['all']});
+      chrome.browserAction.setPopup({popup: 'popup.html', contexts:['selection']});
     }
     notification.show();
     return "SelectNotify()";
