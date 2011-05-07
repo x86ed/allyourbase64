@@ -23,4 +23,6 @@ $(function() {
        });
      }
   });
+  
+  var parent = chrome.contextMenus.create({"title": "All your base64"});
 });
