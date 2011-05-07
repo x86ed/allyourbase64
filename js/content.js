@@ -10,7 +10,6 @@ $(function() {
   $('body').mouseup(function(){
     selectedText = getSText();
     port = chrome.extension.connect({name: "selectedText"});
-    var str = "testing"
-    port.postMessage({value: selectedText , badge: str });
+    port.postMessage({value: selectedText});
   });
  });
