@@ -20,7 +20,6 @@ var pad = function(number, base) {
 
 }
 var encodeBase = function(inString, base){
-  chrome.browserAction.setBadgeText({text: ""});
 	var output = "";
 	base = parseInt(base);
 	if(base<63 && inString)
@@ -63,6 +62,7 @@ var decodeBase = function(inString,base){
 }
 
 $(function() {
+  chrome.browserAction.setBadgeText({text: ""});
 	$("textarea").keyup(function(e){
 		$("textarea").removeClass("selected");
 		$(this).addClass("selected");
