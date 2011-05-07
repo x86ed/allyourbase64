@@ -31,6 +31,7 @@ $(function() {
   });
   
   var allYourContext = chrome.contextMenus.create({title: "type of data to send", contexts:['selection']});
+  var separatorContext = chrome.contextMenus.create({type: 'separator', contexts:['selection']});
     var stringContext = chrome.contextMenus.create({title: "ASCII", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'str')}});
     var base64Context = chrome.contextMenus.create({title: "Base64", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'b64')}});
     var binaryContext = chrome.contextMenus.create({title: "Binary", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'010')}});
@@ -38,5 +39,4 @@ $(function() {
     var hexContext = chrome.contextMenus.create({title: "Hexadecimal", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'hex')}});
     var urlContext = chrome.contextMenus.create({title: "URL Encoded", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'url')}});
     var urlComponentContext = chrome.contextMenus.create({title: "URL Component", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'url+')}});
-  var separatorContext = chrome.contextMenus.create({type: 'separator', contexts:['selection']});
 });
