@@ -11,7 +11,8 @@ $(function() {
 	chrome.extension.onConnect.addListener(function(port) {
      if(port.name == "selectedText"){
        port.onMessage.addListener(function(msg) {
-         selectNotify(msg.value); 
+         if(msg.value.length)
+           selectNotify(msg.value); 
        });
      }
   });
