@@ -35,7 +35,7 @@ var selectNotify = function(inString,badgeType){
           typeVal = '#bs-urlC';
           break;
          default:
-           typeVal ="bs-string";   
+           typeVal ="#bs-string";   
       }
       sendMessageP = false;
   }
