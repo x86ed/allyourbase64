@@ -32,10 +32,11 @@ $(function() {
   
   var allYourContext = chrome.contextMenus.create({title: "type of data to send", contexts:['selection']});
     var stringContext = chrome.contextMenus.create({title: "ASCII", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'str')}});
-    var base64Context = chrome.contextMenus.create({title: "Base64", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'b64')}});
-    var binaryContext = chrome.contextMenus.create({title: "Binary", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'010')}});
-    var decimalContext = chrome.contextMenus.create({title: "Decimal", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'dec')}});
-    var hexContext = chrome.contextMenus.create({title: "Hexadecimal", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'hex')}});
-    var urlContext = chrome.contextMenus.create({title: "URL Encoded", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'url')}});
-    var urlComponentContext = chrome.contextMenus.create({title: "URL Component", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'url+')}});
+    var base64Context = chrome.contextMenus.create({title: "Base64", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'b64')}});
+    var binaryContext = chrome.contextMenus.create({title: "Binary", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'010')}});
+    var decimalContext = chrome.contextMenus.create({title: "Decimal", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'dec')}});
+    var hexContext = chrome.contextMenus.create({title: "Hexadecimal", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'hex')}});
+    var urlContext = chrome.contextMenus.create({title: "URL Encoded", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'url')}});
+    var urlComponentContext = chrome.contextMenus.create({title: "URL Component", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'url+')}});
+  var separatorContext = chrome.contextMenus.create({type: 'separator', contexts:['selection']});
 });
