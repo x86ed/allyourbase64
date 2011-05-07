@@ -1,5 +1,5 @@
 var oldVal= "";
-var sendMessageP = false
+var sendMessageP = true;
 var selectNotify = function(inArray,badgeType){
   if(sendMessageP){
      var notification = webkitNotifications.createNotification(
