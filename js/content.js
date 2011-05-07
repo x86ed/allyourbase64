@@ -1,6 +1,6 @@
 var getSText = function(){
   var t = '';
-  if(window.getSelection){
+  if(window.getSelection)
     t = window.getSelection();
   return t;
 }
