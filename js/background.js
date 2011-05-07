@@ -24,5 +24,7 @@ $(function() {
      }
   });
   
-  var parent = chrome.contextMenus.create({"title": "All your base64", contexts:['selection']});
+  var allYourContext = chrome.contextMenus.create({"title": "All your base64", contexts:['selection']});
+    var stringContext = chrome.contextMenus.create({"title": "String", "parentId": allYourContext});
+  var divider = chrome.contextMenus.create({contexts:['separator']});
 });
