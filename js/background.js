@@ -1,5 +1,6 @@
 var oldVal= "";
 var sendVal= "";
+vat typeVal ="";
 var sendMessageP = true;
 var selectNotify = function(inString,badgeType){
   if(sendMessageP){
@@ -14,6 +15,28 @@ var selectNotify = function(inString,badgeType){
         chrome.browserAction.setPopup({popup: 'popup.html'});
       }
       notification.show();
+      switch (badgeType){
+        case 'b64':
+          typeVal = '#bs-base64';
+          break;
+         case '010':
+          typeVal = '#bs-binary';
+          break;
+         case 'dec':
+          typeVal = '#bs-dec';
+          break;
+         case 'hex':
+          typeVal = '#bs-hex';
+          break;
+         case 'url':
+          typeVal = '#bs-url';
+          break;
+         case 'url+':
+          typeVal = '#bs-urlC';
+          break;
+         default:
+           typeVal ="bs-string";   
+      }
       sendMessageP = false;
   }
   return "SelectNotify()";
