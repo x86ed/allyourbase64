@@ -7,12 +7,14 @@ var selectNotify = function(inString){
     notification.show();
     return "SelectNotify()";
 }
+var oldVal= "";
 $(function() {
 	chrome.extension.onConnect.addListener(function(port) {
      if(port.name == "selectedText"){
        port.onMessage.addListener(function(msg) {
-         if(msg.value.length)
-           selectNotify(msg.value); 
+         if(msg.value.length && oldVal != msg.value)
+           selectNotify(msg.value);
+           oldVal = msg.value;
        });
      }
   });
