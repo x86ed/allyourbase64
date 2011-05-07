@@ -24,6 +24,6 @@ $(function() {
      }
   });
   
-  var allYourContext = chrome.contextMenus.create({"title": "All your base64", contexts:['selection']});
-    var stringContext = chrome.contextMenus.create({"title": "String", "parentId": allYourContext.id});
+  var allYourContext = chrome.contextMenus.create({title: "Encode selection of type", contexts:['selection']});
+    var stringContext = chrome.contextMenus.create({title: "String", parentId: allYourContext});
 });
