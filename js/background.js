@@ -7,7 +7,7 @@ var selectNotify = function(inArray){
     notification.ondisplay = function(){
       chrome.browserAction.setBadgeBackgroundColor({color: [218 , 17 , 2 , 255]});
       chrome.browserAction.setBadgeText({text:inArray.badge});
-      chrome.browserAction.setPopup({popup: 'popup.html', contexts:['selection']});
+      chrome.browserAction.setPopup({popup: 'popup.html'});
     }
     notification.show();
     return "SelectNotify()";
@@ -24,5 +24,5 @@ $(function() {
      }
   });
   
-  var parent = chrome.contextMenus.create({"title": "All your base64"});
+  var parent = chrome.contextMenus.create({"title": "All your base64", contexts:['selection']});
 });
