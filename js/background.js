@@ -1,4 +1,5 @@
 var oldVal= "";
+var sendVal= "";
 var sendMessageP = true;
 var selectNotify = function(inString,badgeType){
   if(sendMessageP){
@@ -24,13 +25,13 @@ $(function() {
        port.onMessage.addListener(function(msg) {
          if(msg.value.length && oldVal != msg.value)
            sendMessageP = true;
-           oldVal = msg.value;
+           sendVal = oldVal = msg.value;
        });
      }
   });
   
   var allYourContext = chrome.contextMenus.create({title: "type of data to send", contexts:['selection']});
-  var stringContext = chrome.contextMenus.create({title: "ASCII", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'str')}});
+    var stringContext = chrome.contextMenus.create({title: "ASCII", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(sendVal,'str')}});
     var base64Context = chrome.contextMenus.create({title: "Base64", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'b64')}});
     var binaryContext = chrome.contextMenus.create({title: "Binary", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'010')}});
     var decimalContext = chrome.contextMenus.create({title: "Decimal", parentId: allYourContext, contexts:['selection'],onclick:function(){selectNotify(oldVal,'dec')}});
