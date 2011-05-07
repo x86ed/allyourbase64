@@ -1,7 +1,7 @@
 var getSText = function(){
   var t = '';
   if(window.getSelection){
-    t = window.getSelection();
+    t = window.getSelection().toString();
   }
   return t;
 }
