@@ -1,6 +1,6 @@
 var selectNotify = function(inString){
  var notification = webkitNotifications.createNotification(
-      'icons/icon-48.png',  // icon url - can be relative
+      'img/catsmouth.gif',  // icon url - can be relative
       'you have selected',  // notification title
       inString  // notification body text
     );
