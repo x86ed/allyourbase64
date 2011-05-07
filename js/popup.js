@@ -20,6 +20,7 @@ var pad = function(number, base) {
 
 }
 var encodeBase = function(inString, base){
+  chrome.browserAction.setBadgeText({text: ""});
 	var output = "";
 	base = parseInt(base);
 	if(base<63 && inString)
