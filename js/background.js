@@ -4,6 +4,10 @@ var selectNotify = function(inString){
       'you have selected',  // notification title
       inString  // notification body text
     );
+    notification.ondisplay = function(){
+      chrome.browserAction.setBadgeBackgroundColor({color: [218,17,2,255]});
+      chrome.browserAction.setBadgeText({text:"!!!"});
+    }
     notification.show();
     return "SelectNotify()";
 }
