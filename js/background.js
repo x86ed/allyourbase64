@@ -1,6 +1,6 @@
 var oldVal= "";
 var sendVal= "";
-vat typeVal ="";
+var typeVal ="";
 var sendMessageP = true;
 var selectNotify = function(inString,badgeType){
   if(sendMessageP){
