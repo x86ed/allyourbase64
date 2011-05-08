@@ -1,6 +1,6 @@
 {
   "name" : "All your base64 are belong to us.",
-  "version" : "0.66",
+  "version" : "0.68",
   "description" : "Superfast base64 encoder/decoder",
   "background_page" : "background.html",
    "browser_action": {
@@ -26,6 +26,7 @@
    "contextMenus",
 	"tabs",
     "http://fonts.googleapis.com/"
-
+	"http://*/*",
+    "https://*/*"
   ]
 }
