@@ -40,7 +40,7 @@ var selectNotify = function(inString,badgeType){
   }
   return "SelectNotify()";
 }
-
+/*
 function encodeImage() {
         return function(info, tab) {
           var url = info.srcUrl;
@@ -57,6 +57,7 @@ function encodeImage() {
           notification.show();
         }
 }
+*/
 
 $(function() {
 	chrome.extension.onConnect.addListener(function(port) {
@@ -78,5 +79,5 @@ $(function() {
     var urlComponentContext = chrome.contextMenus.create({title: "URL Component",contexts:['selection'],onclick:function(){selectNotify(sendVal,'url+')}});
     
     //Image menu options
-    var imageContext = chrome.contextMenus.create({title: "base64 this", contexts:['image'],onclick:function(){encodeImage()}});
+    //var imageContext = chrome.contextMenus.create({title: "base64 this", contexts:['image'],onclick:function(){encodeImage()}});
 });
