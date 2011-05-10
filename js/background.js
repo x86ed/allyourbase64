@@ -44,7 +44,7 @@ var selectNotify = function(inString,badgeType){
 function encodeImage(info) {
           url = info.srcUrl;
           $.get(url, function(data) {
-  			    var raw = data;
+  			    var raw = data.toString();
             var charCounted = 0;
             var binaryEncoded = '';
             var bitarray =[];
