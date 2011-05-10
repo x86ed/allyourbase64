@@ -40,11 +40,15 @@ var selectNotify = function(inString,badgeType){
   }
   return "SelectNotify()";
 }
-/*
-function encodeImage() {
-        return function(info, tab) {
-          var url = info.srcUrl;
-          var bmpFile = new BinFileReader(url);
+
+function encodeImage(info) {
+          url = info.srcUrl;
+          $.get(url, function(data) {
+  			var raw = data;
+			 sendVal = raw;
+			console.log(raw);
+		  });
+		  typeVal = '#bs-string';
           var notification = webkitNotifications.createNotification(
             'icons/icon-48.png',  // icon url - can be relative
             'you have encoded',  // notification title
@@ -55,9 +59,7 @@ function encodeImage() {
             chrome.browserAction.setBadgeText({text:"img"});
           }
           notification.show();
-        }
 }
-*/
 
 $(function() {
 	chrome.extension.onConnect.addListener(function(port) {
@@ -79,5 +81,5 @@ $(function() {
     var urlComponentContext = chrome.contextMenus.create({title: "URL Component",contexts:['selection'],onclick:function(){selectNotify(sendVal,'url+')}});
     
     //Image menu options
-    //var imageContext = chrome.contextMenus.create({title: "base64 this", contexts:['image'],onclick:function(){encodeImage()}});
+    var imageContext = chrome.contextMenus.create({title: "base64 this", contexts:['image'],onclick:function(item){encodeImage(item)}});
 });
