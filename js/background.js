@@ -48,7 +48,7 @@ function encodeImage(info) {
             var charCounted = 0;
             var binaryEncoded = '';
             var bitarray =[];
-            while (charCounted<raw.length()-1);
+            while (charCounted<raw.length-1);
               binaryEncoded += raw.charCodeAt(charCounted);
             for (var i=0; i<binaryEncoded.length; i+=interval)
               bitarray.push(string.substring (i, i+interval));
