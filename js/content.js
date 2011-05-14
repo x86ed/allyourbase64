@@ -5,7 +5,7 @@ var getSText = function(){
   }
   return t;
 }
-selectedText = ''
+var selectedText = ''
 $(function() {
   $('body').mouseup(function(){
     selectedText = getSText();
