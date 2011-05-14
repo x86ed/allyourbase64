@@ -8,6 +8,7 @@ var selectNotify = function(inString,badgeType){
         'icons/icon-48.png',  // icon url - can be relative
         'you have selected',  // notification title
         inString  // notification body text
+        console.log(inString);
       );
       notification.ondisplay = function(){
         chrome.browserAction.setBadgeBackgroundColor({color: [218 , 17 , 2 , 255]});
@@ -40,7 +41,7 @@ var selectNotify = function(inString,badgeType){
   }
   return "SelectNotify()";
 }
-/*
+
 function encodeImage(info) {
           url = info.srcUrl;
           $.get(url, function(data) {
@@ -66,7 +67,7 @@ function encodeImage(info) {
             chrome.browserAction.setBadgeText({text:"img"});
           }
           notification.show();
-}*/
+}
 
 $(function() {
 	chrome.extension.onConnect.addListener(function(port) {
@@ -88,5 +89,5 @@ $(function() {
     var urlComponentContext = chrome.contextMenus.create({title: "URL Component",contexts:['selection'],onclick:function(){selectNotify(sendVal,'url+')}});
     
     //Image menu options
-    //var imageContext = chrome.contextMenus.create({title: "base64 this", contexts:['image'],onclick:function(item){encodeImage(item)}});
+    var imageContext = chrome.contextMenus.create({title: "base64 this", contexts:['image'],onclick:function(item){encodeImage(item)}});
 });
