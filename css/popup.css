@@ -33,6 +33,7 @@ label span.bs-button:hover{
   height:22px;
   top:0px;
 }
+label span.bs-clip,
 label span.bs-maximize{
   display:block;
   width:16px;
@@ -41,6 +42,10 @@ label span.bs-maximize{
   margin: 2px auto;
   cursor:pointer;
   background:transparent url(../img/MinMax.gif) no-repeat scroll 0 0;
+}
+
+label span.bs-clip{
+  background:transparent url(../img/clip.gif) no-repeat scroll 0 0;
 }
 
 textarea{
