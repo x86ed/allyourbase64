@@ -17,17 +17,25 @@ label{
 	margin:0 auto;
 	padding:5px 0;
 }
-
+label span.button{
+  width:20px;
+  height:20px;
+  float:right;
+  position:relative;
+  display:block;
+  -webkit-border-top-left-radius:4px;
+  -webkit-border-top-right-radius:4px;
+  background-color:#fff;
+}
 label span.maximize{
   display:block;
   width:16px;
   height:16px;
   position:relative;
-  margin: 0;
+  margin: 0 auto;
   padding :2px;
-  float:right;
   cursor:pointer;
-  background:#63633b url(../img/MinMax.gif) no-repeat scroll 0 0;
+  background:transparent url(../img/MinMax.gif) no-repeat scroll 0 0;
 }
 
 textarea{
