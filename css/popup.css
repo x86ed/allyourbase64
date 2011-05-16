@@ -54,8 +54,10 @@ textarea{
 	margin:0 auto;
 	resize:none;
 	border:none;
-    opacity:.75;
-  overflow:elipsis;
+  opacity:.75;
+  white-space: nowrap;
+  overflow: hidden;
+	text-overflow: ellipsis;
 }
 textarea:focus{
     opacity:.9;
