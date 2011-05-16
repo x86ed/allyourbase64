@@ -55,7 +55,6 @@ textarea{
 	resize:none;
 	border:none;
   opacity:.75;
-  white-space: nowrap;
   overflow: hidden;
 	text-overflow: ellipsis;
 }
