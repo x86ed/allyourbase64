@@ -1,3 +1,4 @@
+ZeroClipboard.setMoviePath( '../flash/ZeroClipboard.swf' );
 var pad = function(number, base) {
 	base = parseInt(base);
    	switch(base){
