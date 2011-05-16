@@ -32,8 +32,7 @@ label span.bs-maximize{
   width:16px;
   height:16px;
   position:relative;
-  margin: 0 auto;
-  padding :2px;
+  margin: 2px auto;
   cursor:pointer;
   background:transparent url(../img/MinMax.gif) no-repeat scroll 0 0;
 }
