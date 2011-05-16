@@ -69,7 +69,7 @@ clip.setCSSEffects( true );
 clip.addEventListener( 'mouseDown', function(client) { 
                                 clip.setText( document.getElementById('bs-string').value );
 } );
-//clip.glue('bs-clipStr');
+clip.glue('bs-clipStr');
 $(function() {
   chrome.browserAction.setBadgeText({text: ""});
 	$("textarea").keyup(function(e){
