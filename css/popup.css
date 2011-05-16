@@ -17,7 +17,7 @@ label{
 	margin:0 auto;
 	padding:5px 0;
 }
-label span.button{
+label span.bs-button{
   width:20px;
   height:20px;
   float:right;
@@ -27,7 +27,7 @@ label span.button{
   -webkit-border-top-right-radius:4px;
   background-color:#fff;
 }
-label span.maximize{
+label span.bs-maximize{
   display:block;
   width:16px;
   height:16px;
