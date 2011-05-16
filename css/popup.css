@@ -20,12 +20,17 @@ label{
 label span.bs-button{
   width:20px;
   height:20px;
+  top:1px;
   float:right;
   position:relative;
   display:block;
   -webkit-border-top-left-radius:4px;
   -webkit-border-top-right-radius:4px;
   background-color:#fff;
+}
+label span.bs-button:hover{
+  height:22px;
+  top:0px;
 }
 label span.bs-maximize{
   display:block;
