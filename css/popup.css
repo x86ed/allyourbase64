@@ -55,10 +55,12 @@ textarea{
 	resize:none;
 	border:none;
     opacity:.75;
+  overflow:elipsis;
 }
 textarea:focus{
     opacity:.9;
     outline:none;
+    overflow:auto;
 }
 div.bs-left{
 	width:240px;
