@@ -62,6 +62,14 @@ var decodeBase = function(inString,base){
 	return output;
 }
 
+var clip = new ZeroClipboard.Client();
+clip.setText( '' ); // will be set later on mouseDown
+clip.setHandCursor( true );
+clip.setCSSEffects( true );
+clip.addEventListener( 'mouseDown', function(client) { 
+                                clip.setText( document.getElementById('bs-string').value );
+} );
+clip.glue('bs-clipStr');
 $(function() {
   chrome.browserAction.setBadgeText({text: ""});
 	$("textarea").keyup(function(e){
@@ -94,6 +102,11 @@ $(function() {
 			$(".bs-imageBox").css('display', 'none');
 		}	
 	});
+  // for scaling tabs
+  function(){
+    var $fields = $(".bs-maximize")
+    
+  }
   var bgOb = chrome.extension.getBackgroundPage();
   if(bgOb.sendVal.length && bgOb.typeVal.length)
     $(bgOb.typeVal).val(bgOb.sendVal).keyup();
