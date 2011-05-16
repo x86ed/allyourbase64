@@ -103,10 +103,6 @@ $(function() {
 		}	
 	});
   // for scaling tabs
-  function(){
-    var $fields = $(".bs-maximize")
-    
-  }
   var bgOb = chrome.extension.getBackgroundPage();
   if(bgOb.sendVal.length && bgOb.typeVal.length)
     $(bgOb.typeVal).val(bgOb.sendVal).keyup();
