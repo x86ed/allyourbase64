@@ -8,7 +8,6 @@ var selectNotify = function(inString,badgeType){
         'icons/icon-48.png',  // icon url - can be relative
         'you have selected',  // notification title
         inString  // notification body text
-        console.log(inString);
       );
       notification.ondisplay = function(){
         chrome.browserAction.setBadgeBackgroundColor({color: [218 , 17 , 2 , 255]});
