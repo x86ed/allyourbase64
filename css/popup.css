@@ -18,6 +18,18 @@ label{
 	padding:5px 0;
 }
 
+label span.maximize{
+  display:block;
+  width:16px;
+  height:16px;
+  position:relative;
+  margin: 0;
+  padding :2px;
+  float:right;
+  cursor:pointer;
+  background:#fff url(../img/maxMin.gif) no-repeat scroll 0 0;
+}
+
 textarea{
     -webkit-border-top-left-radius:4px;
     -webkit-border-bottom-right-radius:4px;
