@@ -43,7 +43,7 @@ var selectNotify = function(inString,badgeType){
 
 function encodeImage(info) {
           url = info.srcUrl;
-          $.get(url, function(data) {
+          /*$.get(url, function(data) {
   			    var raw = data.toString();
             var charCounted = 0;
             var binaryEncoded = '';
@@ -54,7 +54,14 @@ function encodeImage(info) {
               bitarray.push(string.substring (i, i+interval));
 			      sendVal = bitarray;
 			      console.log(sendVal);
-		  });
+		  });*/
+        BinaryAjax(
+        url,
+        function(oHTTP) {
+            console.log(oHTTP.binaryResponse);
+            if (fncCallback) fncCallback();
+        }
+    )
 		  typeVal = '#bs-string';
           var notification = webkitNotifications.createNotification(
             'icons/icon-48.png',  // icon url - can be relative
