@@ -58,8 +58,8 @@ function encodeImage(info) {
         BinaryAjax(
         url,
         function(oHTTP) {
-            console.log(oHTTP.binaryResponse);
-            if (fncCallback) fncCallback();
+            console.log(oHTTP.binaryResponse.toBase64());
+            
         }
     )
 		  typeVal = '#bs-string';
