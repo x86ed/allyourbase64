@@ -59,6 +59,7 @@ function encodeImage(info) {
         url,
         function(oHTTP) {
             console.log(oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength()));
+            byteArray = oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength());
         }
     )
 		  typeVal = '#bs-string';
