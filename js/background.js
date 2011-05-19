@@ -58,7 +58,7 @@ function encodeImage(info) {
         BinaryAjax(
         url,
         function(oHTTP) {
-            console.log(oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength());
+            console.log(oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength()));
         }
     )
 		  typeVal = '#bs-string';
