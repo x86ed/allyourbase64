@@ -1,4 +1,4 @@
-ZeroClipboard.setMoviePath( '../flash/ZeroClipboard.swf' );
+//ZeroClipboard.setMoviePath( '../flash/ZeroClipboard.swf' );
 var pad = function(number, base) {
 	base = parseInt(base);
    	switch(base){
@@ -62,14 +62,14 @@ var decodeBase = function(inString,base){
 	return output;
 }
 
-var clip = new ZeroClipboard.Client();
-clip.setText( '' ); // will be set later on mouseDown
-clip.setHandCursor( true );
-clip.setCSSEffects( true );
-clip.addEventListener( 'mouseDown', function(client) { 
-                                clip.setText( document.getElementById('bs-string').value );
-} );
-clip.glue('bs-clipStr');
+//var clip = new ZeroClipboard.Client();
+//clip.setText( '' ); // will be set later on mouseDown
+//clip.setHandCursor( true );
+//clip.setCSSEffects( true );
+//clip.addEventListener( 'mouseDown', function(client) { 
+//                                clip.setText( document.getElementById('bs-string').value );
+//} );
+//clip.glue('bs-clipStr');
 $(function() {
   chrome.browserAction.setBadgeText({text: ""});
 	$("textarea").keyup(function(e){
@@ -103,6 +103,21 @@ $(function() {
 		}	
 	});
   // for scaling tabs
+  $("span.bs-maximize").click(function(){
+    var $thisOffset = $(this).parent().parent().offset();
+    var thisID= $(this).attr('rel');
+    var fieldVal= encodeBase($("#"+ thisID).val(),$("#" + thisID).attr('rel'));
+    $('body').append('<div id="bs-floatOver" style="top:' + $thisOffset.top  + 'px;left:' + $thisOffset.left  + 'px" ><label for="bs-floatField">' + thisID.replace('bs-','') + '<!--<span class="bs-button"><span class="bs-clip" id="bs-clipStr" rel="bs-string"></span></span>--><span class="bs-button"><span class="bs-maximize bs-min" rel="' + thisID + '"></span></span></label><textarea id="bs-floatField" rel="99" rows="33">' + fieldVal  + '</textarea></div>');
+   $("div.bs-wordBubble").fadeOut();
+   $("#bs-floatOver").animate({ top: 0, left:0, width: $('body').width() - 4 +"px", height: $('body').height() -4 +"px" },200,function(){
+      $('span.bs-maximize.bs-min').click(function(e){
+	e.preventDefault();
+        $("#" + thisID).val(encodeBase($('#bs-floatField').val(),$("#" + thisID).attr('rel')));
+        $("div.bs-wordBubble").fadeIn();
+        $("#bs-floatOver").animate({ top: $thisOffset.top +"px", left: $thisOffset.left + "px", width:'100%', height:'100%'},200,function(){$("#bs-floatOver").remove();});
+   });
+  });
+  });
   var bgOb = chrome.extension.getBackgroundPage();
   if(bgOb.sendVal.length && bgOb.typeVal.length)
     $(bgOb.typeVal).val(bgOb.sendVal).keyup();
