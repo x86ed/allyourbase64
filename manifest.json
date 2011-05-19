@@ -1,6 +1,6 @@
 {
   "name" : "All your base64 are belong to us.",
-  "version" : "0.68",
+  "version" : "0.69",
   "description" : "Superfast base64 encoder/decoder",
   "background_page" : "background.html",
    "browser_action": {
