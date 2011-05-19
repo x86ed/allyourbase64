@@ -49,6 +49,9 @@ label span.bs-maximize{
   cursor:pointer;
   background:transparent url(../img/MinMax.gif) no-repeat scroll 0 0;
 }
+label span.bs-maximize.bs-min{
+  background-position: -16px 0;
+}
 
 label span.bs-clip{
   background:transparent url(../img/clip.gif) no-repeat scroll 0 0;
