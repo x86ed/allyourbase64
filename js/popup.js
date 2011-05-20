@@ -85,7 +85,7 @@ $(function() {
 		
 		//changes image
 		var imgType = pushVal.substring(0,3);
-			if (imgType == 'Ø¯Ø') {
+			if (imgType == '&#xff;&#xd8;&#xff;') {
 				imgType = "jpeg";
 			}else if (imgType == "GIF") {
 					imgType = "gif";
