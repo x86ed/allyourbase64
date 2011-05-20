@@ -74,7 +74,7 @@ function encodeImage(info) {
           console.log(base64String);
         }
     )
-		  typeVal = '#bs-string';
+		  typeVal = '#bs-base64';
           var notification = webkitNotifications.createNotification(
             'icons/icon-48.png',  // icon url - can be relative
             'you have encoded',  // notification title
