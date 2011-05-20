@@ -122,7 +122,7 @@ $(function() {
 	e.preventDefault();
         $("#" + thisID).val(encodeBase($('#bs-floatField').val(),$("#" + thisID).attr('rel')));
         $("div.bs-wordBubble").fadeIn();
-        $("#bs-floatOver").animate({ top: $thisOffset.top +"px", left: $thisOffset.left + "px", width:'100%', height:'100%'},200,function(){$("#bs-floatOver").remove();});
+        $("#bs-floatOver").animate({ top: $thisOffset.top +"px", left: $thisOffset.left + "px", width:'235px', height:'103px'},200,function(){$("#bs-floatOver").remove();});
    });
   });
   });
