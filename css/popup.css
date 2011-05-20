@@ -123,24 +123,26 @@ img.bs-imageOutput{
 ul.bs-tabs{
   list-style-type:none;
   display:block;
-  width:100%;
+  width:auto;
   height:30px;
   background-color:#DA4902;
-  padding:0;
+  padding:0 5px;
   margin:0;
   display:none;
 }
 
 ul.bs-tabs li{
-  display: inline-block;
-  height: 30px;
-  padding: 0 10px;
-  margin: 2px 4px 0 0;
-  background-color: #CCC;
-  font-size: 22px;
-  text-shadow: -1px -1px white, 1px 1px #333;
-  color: #444;
-  cursor:pointer;
+display: inline-block;
+height: 30px;
+padding: 0 10px;
+margin: 2px 4px 0 0;
+background-color: #CCC;
+font-size: 22px;
+text-shadow: -1px -1px #333, 1px 1px #fff;
+color: #444;
+cursor: pointer;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
 }
 
 ul.bs-tabs li:hover{
