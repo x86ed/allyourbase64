@@ -3,11 +3,11 @@ body {
 	border:1px solid #14080a;
 	-webkit-border-radius: 4px;
 	overflow:auto;
-    min-width:480px;
-	height:auto;
+  min-width:480px;
+	height:459px;
 	margin:0;
 	padding:0;
-	
+  background-color:#DA4902; 
 }
 
 label{
@@ -16,14 +16,16 @@ label{
 	text-align:left;
 	margin:0 auto;
 	padding:5px 0 0;
-    height:22px;
+  height:22px;
 }
+
 div#bs-floatOver{
 	width:235px;
 	height:103px;
 	position:absolute;
 	z-index:3;
 }
+
 label span.bs-button{
   width:20px;
   height:20px;
@@ -35,10 +37,12 @@ label span.bs-button{
   -webkit-border-top-right-radius:4px;
   background-color:#fff;
 }
+
 label span.bs-button:hover{
   height:22px;
   top:0px;
 }
+
 label span.bs-clip,
 label span.bs-maximize{
   display:block;
@@ -49,6 +53,7 @@ label span.bs-maximize{
   cursor:pointer;
   background:transparent url(../img/MinMax.gif) no-repeat scroll 0 0;
 }
+
 label span.bs-maximize.bs-min{
   background-position: -16px 0;
 }
@@ -58,8 +63,8 @@ label span.bs-clip{
 }
 
 textarea{
-    -webkit-border-top-left-radius:4px;
-    -webkit-border-bottom-right-radius:4px;
+  -webkit-border-top-left-radius:4px;
+  -webkit-border-bottom-right-radius:4px;
 	font-family: sans-serif;
 	font-size:10px;
 	width:98%;
@@ -72,11 +77,13 @@ textarea{
   overflow: hidden;
 	text-overflow: ellipsis;
 }
+
 textarea:focus{
-    opacity:.9;
-    outline:none;
-    overflow:auto;
+  opacity:.9;
+  outline:none;
+  overflow:auto;
 }
+
 div.bs-left{
 	width:240px;
 	border-top-left-radius: 4px;
@@ -95,7 +102,6 @@ div.bs-catsFooter{
 	height:120px;
 }
 
-
 div.bs-right{
 	width:240px;
 	border-top-right-radius: 4px;
@@ -104,9 +110,11 @@ div.bs-right{
 	height:429px;
 	background-color:#DA4902;
 }
+
 div.bs-imageBox{
 	display:none;
 }
+
 img.bs-imageOutput{
 	display:block;
 	position:relative;
@@ -130,6 +138,7 @@ ul.bs-tabs li{
   margin: 0 2px;
   background-color:#bedead;
 }
+
 div#bs-hashTab,
 div#bs-imgTab{
   display:none;
