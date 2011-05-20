@@ -106,6 +106,8 @@ $(function() {
 	});
   // tab control
   $('.bs-tab').click(function(){
+    $('.bs-tab').removeClass('selected');
+    $(this).addClass('selected');
     $('.bs-tabBody').css('display','none');
     $($(this).attr('rel')).css('display', 'block');
   });
