@@ -85,11 +85,11 @@ $(function() {
 		
 		//changes image
 		var imgType = pushVal.substring(0,8);
-			if (imgType.search('ÿØÿ') > 0) {
+			if (imgType.search('ÿØÿ') > -1) {
 				imgType = "jpeg";
-			}else if (imgType.search("GIF") > 0) {
+			}else if (imgType.search("GIF") > -1) {
 					imgType = "gif";
-			}else if (imgType.search("PNG") > 0) {
+			}else if (imgType.search("PNG") > -1) {
 					imgType = "png";
 			}else {
 					imgType = 0;
