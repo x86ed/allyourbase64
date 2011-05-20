@@ -138,13 +138,13 @@ display: inline-block;
 height: 30px;
 padding: 0 10px;
 margin: 2px 4px 0 0;
-border-top: 1px solid #655E4E;
-border-left: 1px solid #655E4E;
-border-right: 1px solid #655E4E;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fef8e4));
+border-top: 1px solid #494437;
+border-left: 1px solid #494437;
+border-right: 1px solid #494437;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fedc6b), to(#fed448));
 font-size: 22px;
 text-shadow: -1px -1px #333, 1px 1px #fff;
-color: #d75e2e;
+color: #4c3000;
 cursor: pointer;
 -webkit-border-top-left-radius: 4px;
 -webkit-border-top-right-radius: 4px;
@@ -152,6 +152,16 @@ cursor: pointer;
 
 ul.bs-tabs li:hover{
   background-color:#444;
+  margin: 1px 4px 0 0;
+}
+
+ul.bs-tabs li.selected{
+border-top: 1px solid #655E4E;
+border-left: 1px solid #655E4E;
+border-right: 1px solid #655E4E;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#DA4902));
+text-shadow: -1px -1px #333, 1px 1px #fff;
+color: #d75e2e;
 }
 
 .bs-tabBody{
