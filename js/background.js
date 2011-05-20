@@ -67,7 +67,7 @@ function encodeImage(info) {
             counter = 0;
             byteArray =[];
             while (counter < base64String.length/6 ){
-             bytearray[counter]= base64Array[parseInt(base64String.substr(counter*6,6),2)];
+             byteArray[counter]= base64Array[parseInt(base64String.substr(counter*6,6),2)];
              counter ++;
             }
             base64String = base64Array.join("") + eqPad;
