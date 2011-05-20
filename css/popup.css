@@ -119,6 +119,8 @@ ul.bs-tabs{
   width:100%;
   height:30px;
   background-color:#DA4902;
+  padding:0;
+  margin:0;
 }
 
 ul.bs-tabs li{
