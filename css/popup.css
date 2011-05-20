@@ -117,7 +117,8 @@ div.bs-imageBox{
 img.bs-imageOutput{
 	display:block;
 	position:relative;
-	margin:0 auto;
+	margin:10px auto;
+  height:300px;
 }
 
 ul.bs-tabs{
@@ -142,6 +143,11 @@ ul.bs-tabs li{
   color: #444;
   cursor:pointer;
 }
+
+ul.bs-tabs li:hover{
+  background-color:#444;
+}
+
 .bs-tabBody{
   background-color:#DA4902;
 }
