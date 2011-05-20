@@ -125,10 +125,12 @@ ul.bs-tabs{
   display:block;
   width:auto;
   height:30px;
-  background-color:#DA4902;
+  border:1px solid #655E4E;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9c9586), to(#8c8372));
   padding:0 5px;
   margin:0;
   display:none;
+  -webkit-border-radius: 4px;
 }
 
 ul.bs-tabs li{
