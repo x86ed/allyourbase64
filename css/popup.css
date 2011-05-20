@@ -129,6 +129,7 @@ ul.bs-tabs{
   background-color:#DA4902;
   padding:0;
   margin:0;
+  position:relative;
 }
 
 ul.bs-tabs li{
