@@ -46,7 +46,6 @@ function encodeImage(info) {
         BinaryAjax(
         url,
         function(oHTTP) {
-            console.log(oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength()));
              // reuse componets from other parts of the code in the future for now though this section will be holy shit messy.
             var base64String ="";
             var base64Array = ["A", "B" , "C" , "D", "E", "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M", "N", "O", "P" , "Q" ,"R" , "S" , "T" , "U" ,"V" , "W" , "X" , "Y", "Z" , "a" , "b" , "c" ,"d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" ,"m" ,"n" , "o", "p", "q" , "r" ,"s" , "t" , "u" , "v" , "w" ,"x" ,"y" ,"z", "0", "1" , "2" , "3" , "4" , "5", "6" ,"7" , "8" ,"9" , "+", "/" ]
@@ -71,7 +70,6 @@ function encodeImage(info) {
              counter ++;
             }
             base64String = byteArray.join("") + eqPad;
-          console.log(base64String);
           sendVal = base64String;
         }
     )
