@@ -72,6 +72,7 @@ function encodeImage(info) {
             }
             base64String = byteArray.join("") + eqPad;
           console.log(base64String);
+          sendVal = base64String;
         }
     )
 		  typeVal = '#bs-base64';
