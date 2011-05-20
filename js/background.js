@@ -70,7 +70,7 @@ function encodeImage(info) {
              byteArray[counter]= base64Array[parseInt(base64String.substr(counter*6,6),2)];
              counter ++;
             }
-            base64String = base64Array.join("") + eqPad;
+            base64String = byteArray.join("") + eqPad;
           console.log(base64String);
         }
     )
