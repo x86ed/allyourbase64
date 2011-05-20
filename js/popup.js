@@ -94,14 +94,22 @@ $(function() {
 			}else {
 					imgType = 0;
 			}
+    // image display options
 		if (imgType) {
 			$(".bs-imageOutput").attr("src", "data:image/" + imgType + ";base64," + $("#bs-base64").val());
 			$(".bs-imageBox").css('display', 'block');
-		}
-		else {
+      $(".bs-tabs").css('display','block');
+		}else{
 			$(".bs-imageBox").css('display', 'none');
+      $(".bs-tabs").css('display','none');
 		}	
 	});
+  // tab control
+  $('.bs-tab').click(function(){
+    $('.bs-tabBody').css('display','none');
+    $($(this).attr('rel')).css('display', 'block');
+  });
+   
   // for scaling tabs
   $("span.bs-maximize").click(function(){
     var $thisOffset = $(this).parent().parent().offset();
