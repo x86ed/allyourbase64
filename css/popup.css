@@ -132,11 +132,16 @@ ul.bs-tabs{
 }
 
 ul.bs-tabs li{
-  display:inline-block;
-  height:30px;
-  padding: 0 4px;
-  margin: 0 2px;
-  background-color:#bedead;
+  display: block;
+  float:left;
+  position:relative;
+  height: 30px;
+  padding: 0 10px;
+  margin: 2px 0 0;
+  background-color: #CCC;
+  font-size: 22px;
+  text-shadow: -1px -1px white, 1px 1px #333;
+  color: #444;
 }
 
 div#bs-hashTab,
