@@ -43,23 +43,35 @@ var selectNotify = function(inString,badgeType){
 
 function encodeImage(info) {
           url = info.srcUrl;
-          /*$.get(url, function(data) {
-  			    var raw = data.toString();
-            var charCounted = 0;
-            var binaryEncoded = '';
-            var bitarray =[];
-            while (charCounted<raw.length-1);
-              binaryEncoded += raw.charCodeAt(charCounted);
-            for (var i=0; i<binaryEncoded.length; i+=interval)
-              bitarray.push(string.substring (i, i+interval));
-			      sendVal = bitarray;
-			      console.log(sendVal);
-		  });*/
         BinaryAjax(
         url,
         function(oHTTP) {
             console.log(oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength()));
-            byteArray = oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength());
+             // reuse componets from other parts of the code in the future for now though this section will be holy shit messy.
+            var base64String ="";
+            var base64Array = ["A", "B" , "C" , "D", "E", "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M", "N", "O", "P" , "Q" ,"R" , "S" , "T" , "U" ,"V" , "W" , "X" , "Y", "Z" , "a" , "b" , "c" ,"d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" ,"m" ,"n" , "o", "p", "q" , "r" ,"s" , "t" , "u" , "v" , "w" ,"x" ,"y" ,"z", "0", "1" , "2" , "3" , "4" , "5", "6" ,"7" , "8" ,"9" , "+", "/" ]
+            var byteArray = oHTTP.binaryResponse.getBytesAt(0,oHTTP.binaryResponse.getLength());
+            var counter = 0;
+            while (counter < byteArray.length){
+              var binVal = byteArray[counter].toString(2);
+              while (binVal.length < 8)
+                binVal = 0 + binVal;
+              byteArray[counter] = binVal;
+              counter ++;
+            }
+            base64String = byteArray.join("")
+            var offset = base64String.length % 3;
+            var eqPad = offset>1?eqPad="=":offset?eqPad ="==":eqPad ="";
+            offset = offset>1?offset="00":offset?offset ="0000":offset ="";
+            base64String += offset;
+            counter = 0;
+            byteArray =[];
+            while (counter < base64string.length/6 ){
+             bytearray[counter]= base64Array[parseInt(base64String.substr(counter*6,6),2)];
+             counter ++;
+            }
+            base64String = base64Array.join("") + eqPad;
+          console.log(base64String);
         }
     )
 		  typeVal = '#bs-string';
