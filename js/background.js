@@ -60,9 +60,9 @@ function encodeImage(info) {
             }
             base64String = byteArray.join("")
             var offset = base64String.length % 3;
-            var eqPad = offset>1?eqPad="=":offset?eqPad ="==":eqPad ="";
-            //offset = offset>1?offset="00":offset?offset ="0000":offset ="";
-            //base64String += offset;
+            var eqPad = offset>1?eqPad="==":offset?eqPad ="=":eqPad ="";
+            offset = offset>1?offset="0000":offset?offset ="00":offset ="";
+            base64String += offset;
             counter = 0;
             byteArray =[];
             while (counter < base64String.length/6 ){
