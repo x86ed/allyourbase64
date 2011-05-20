@@ -84,12 +84,12 @@ $(function() {
 		});
 		
 		//changes image
-		var imgType = pushVal.substring(0,3);
-			if (imgType == 'ÿØÿ') {
+		var imgType = pushVal.substring(0,8);
+			if (imgType.search('ÿØÿ') > 0) {
 				imgType = "jpeg";
-			}else if (imgType == "GIF") {
+			}else if (imgType.search("GIF") > 0) {
 					imgType = "gif";
-			}else if (imgType == "PNG") {
+			}else if (imgType.search("PNG") > 0) {
 					imgType = "png";
 			}else {
 					imgType = 0;
