@@ -84,7 +84,7 @@ $(function() {
 		});
 		
 		//changes image
-		var imgType = pushVal.substring(0,8);
+		var imgType = pushVal.substring(0,16);
 			if (imgType.search('JFIF') > -1) {
 				imgType = "jpeg";
 			}else if (imgType.search("GIF") > -1) {
