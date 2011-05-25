@@ -89,7 +89,7 @@ div.bs-left{
 	position:relative;
 	float:left;
 	height:429px;
-	background-color:#DA4902;
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.37, rgb(246,182,32)),color-stop(0.75, rgb(254,248,228)));
 }
 
 div.bs-catsFooter{
@@ -106,7 +106,7 @@ div.bs-right{
 	position:relative;
 	float:right;
 	height:429px;
-	background-color:#DA4902;
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.37, rgb(246,182,32)),color-stop(0.75, rgb(254,248,228)));
 }
 
 div.bs-imageBox{
@@ -164,7 +164,7 @@ color: #d75e2e;
 }
 
 .bs-tabBody{
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6b520), to(#DA4902));
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.37, rgb(246,182,32)),color-stop(0.75, rgb(254,248,228)));
 }
 div#bs-hashTab,
 div#bs-imgTab{
