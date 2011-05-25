@@ -89,7 +89,7 @@ div.bs-left{
 	position:relative;
 	float:left;
 	height:429px;
-	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.37, rgb(246,182,32)),color-stop(0.75, rgb(254,248,228)));
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
 
 div.bs-catsFooter{
@@ -106,7 +106,7 @@ div.bs-right{
 	position:relative;
 	float:right;
 	height:429px;
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.37, rgb(246,182,32)),color-stop(0.75, rgb(254,248,228)));
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
 
 div.bs-imageBox{
@@ -158,13 +158,13 @@ ul.bs-tabs li.selected{
 border-top: 1px solid #655E4E;
 border-left: 1px solid #655E4E;
 border-right: 1px solid #655E4E;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6b520));
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fef8e4));
 text-shadow: -1px -1px #333, 1px 1px #fff;
 color: #d75e2e;
 }
 
 .bs-tabBody{
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.37, rgb(246,182,32)),color-stop(0.75, rgb(254,248,228)));
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
 div#bs-hashTab,
 div#bs-imgTab{
