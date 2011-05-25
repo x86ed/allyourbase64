@@ -135,7 +135,7 @@ ul.bs-tabs{
 
 ul.bs-tabs li{
 display: inline-block;
-height: 30px;
+height: 27px;
 padding: 0 10px;
 margin: 2px 4px 0 0;
 border-top: 1px solid #494437;
@@ -155,6 +155,7 @@ ul.bs-tabs li:hover{
 }
 
 ul.bs-tabs li.selected{
+height: 27px;
 border-top: 1px solid #655E4E;
 border-left: 1px solid #655E4E;
 border-right: 1px solid #655E4E;
