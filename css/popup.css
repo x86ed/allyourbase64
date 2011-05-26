@@ -116,6 +116,7 @@ div.bs-right{
 }
 
 div.bs-bottomPad{
+  min-height:449px;
   padding-bottom:5px;
 }
 
