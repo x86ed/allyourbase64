@@ -128,7 +128,7 @@ img.bs-imageOutput{
 	display:block;
 	position:relative;
 	margin:10px auto;
-  height:300px;
+  max-width:450px;
 }
 
 ul.bs-tabs{
