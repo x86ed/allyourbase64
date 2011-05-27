@@ -1,4 +1,6 @@
 //ZeroClipboard.setMoviePath( '../flash/ZeroClipboard.swf' );
+
+//pads zeroes to output that needs it
 var pad = function(number, base) {
 	base = parseInt(base);
    	switch(base){
@@ -20,6 +22,8 @@ var pad = function(number, base) {
     return number;
 
 }
+
+//takes string input outputs encoded data
 var encodeBase = function(inString, base){
 	var output = "";
 	base = parseInt(base);
@@ -33,6 +37,8 @@ var encodeBase = function(inString, base){
                 output +=  pad(inString.charCodeAt(i).toString(base), base) + " ";
 	else if (base == 64)
 		output = btoa(inString);
+  else if (base == 641)
+		output = '<img src="data:image/' + imgType + ';base64,' + btoa(inString); + '" alt="allyourbase64" />'
 	else if (base == 80)
 		output = encodeURI(inString);
 	else if (base == 443)
@@ -42,13 +48,14 @@ var encodeBase = function(inString, base){
 	return output;
 }
 
+//takes encoded data outputs string
 var decodeBase = function(inString,base){
 	var output = "";
 	base = parseInt(base);
 	if(base<63 && inString){
 		var baseArray = inString.split(" ");
 		for (var i = 0; i < baseArray.length; i ++){
-			output += String.fromCharCode(parseInt(baseArray[i].replace(/(&#x|&#)/, ""),base).toString(10));
+			output += String.fromCharCode(parseInt(baseArray[i].replace(/(&#x|&#|;\w)/, ""),base).toString(10));
 			}
 	}else if (base == 64){
 		output = atob(inString);
