@@ -131,10 +131,10 @@ $(function() {
 		if (imgType) {
 			$(".bs-imageOutput").attr("src", "data:image/" + imgType + ";base64," + $("#bs-base64").val());
 			$(".bs-imageBox").css('display', 'block');
-      $(".bs-tabs").css('display','block');
+      $(".bs-imgTab").css('display','block');
 		}else{
 			$(".bs-imageBox").css('display', 'none');
-      $(".bs-tabs").css('display','none');
+      $(".bs-imgTab").css('display','none');
 		}	
 	});
   // tab control
