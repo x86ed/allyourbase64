@@ -39,16 +39,16 @@ var encodeBase = function(inString, base){
 		output = btoa(inString);
   else if (base == 641){
 		var ttype = inString.substring(0,16);
-		 if (imgType.search('JFIF') > -1) {
-		  imgType = "jpeg";
-		 }else if (imgType.search("GIF") > -1) {
-		  imgType = "gif";
-		 }else if (imgType.search("PNG") > -1) {
-		  imgType = "png";
+		 if (ttype.search('JFIF') > -1) {
+		  ttype = "jpeg";
+		 }else if (ttype.search("GIF") > -1) {
+		  ttype = "gif";
+		 }else if (ttype.search("PNG") > -1) {
+		  ttype = "png";
 		 }else {
-		  imgType = 0;
+		  ttype = 0;
 		 }
-    if(imgType){
+    if(ttype){
       output = '<img src="data:image/' + ttype + ';base64,' + btoa(inString); + '" alt="allyourbase64" />';
     }else{
       output = "";
