@@ -8,7 +8,9 @@ body {
 	padding:0;
 }
 
-label{
+
+div.bs-right label,
+div.bs-left label{
    width: 92%;
   display: block;
   text-align: left;
@@ -23,22 +25,21 @@ label{
   font-weight: 700;
 }
 
-div.bs-right label,
-div.bs-left label{
-width: 95%;
-display: block;
-text-align: left;
-margin: 2px auto -4px;
-padding: 5px 0 5px 4px;
-height: 22px;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#9C9586), to(#8C8372));
--webkit-border-top-left-radius: 4px;
--webkit-border-top-right-radius: 4px;
-border: 1px solid #8C8372;
-color: white;
-font-weight: 700;
-border-top-left-radius: 4px 4px;
-border-top-right-radius: 4px 4px;
+label{
+  width: 95%;
+  display: block;
+  text-align: left;
+  margin: 2px auto -4px;
+  padding: 5px 0 5px 4px;
+  height: 22px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9C9586), to(#8C8372));
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border: 1px solid #8C8372;
+  color: white;
+  font-weight: 700;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
 }
 
 div#bs-floatOver{
