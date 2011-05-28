@@ -140,7 +140,6 @@ ul.bs-tabs{
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9c9586), to(#8c8372));
   padding:0 5px;
   margin:10px 10px 2px;
-  display:none;
   -webkit-border-radius: 4px;
 }
 
