@@ -39,19 +39,20 @@ var encodeBase = function(inString, base){
 		output = btoa(inString);
   else if (base == 641)
 		var ttype = inString.substring(0,16);
-			if (imgType.search('JFIF') > -1) {
-				imgType = "jpeg";
-			}else if (imgType.search("GIF") > -1) {
-					imgType = "gif";
-			}else if (imgType.search("PNG") > -1) {
-					imgType = "png";
-			}else {
-					imgType = 0;
-			}
-  if(imgType){
-		output = '<img src="data:image/' + ttype + ';base64,' + btoa(inString); + '" alt="allyourbase64" />';
-  }else{
-    output = "";
+		 if (imgType.search('JFIF') > -1) {
+		  imgType = "jpeg";
+		 }else if (imgType.search("GIF") > -1) {
+		  imgType = "gif";
+		 }else if (imgType.search("PNG") > -1) {
+		  imgType = "png";
+		 }else {
+		  imgType = 0;
+		 }
+    if(imgType){
+      output = '<img src="data:image/' + ttype + ';base64,' + btoa(inString); + '" alt="allyourbase64" />';
+    }else{
+      output = "";
+    }
 	else if (base == 80)
 		output = encodeURI(inString);
 	else if (base == 443)
