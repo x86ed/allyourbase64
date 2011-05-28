@@ -177,6 +177,10 @@ text-shadow: -1px -1px #4c3000, 1px 1px #f6b520;
 color: #d75e2e;
 }
 
+ul.bs-tabs li.bs-imgTab{
+  display:none;
+}
+
 .bs-tabBody{
   background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
