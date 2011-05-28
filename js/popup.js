@@ -60,15 +60,15 @@ var encodeBase = function(inString, base){
 		output = encodeURIComponent(inString);
   //hash section
   else if (base == 555)
-    output = rstr_md5(inString);
+    output = hex_md5(inString);
   else if (base == 111)
-    output = rstr_sha1(inString);
+    output = hex_sha1(inString);
   else if (base == 512)
-    output = rstr_sha512(inString);
+    output = hex_sha512(inString);
   else if (base == 320)
     output = crc32(inString);
   else if (base == 160)
-    output = rstr_rmd160(inString);
+    output = hex_rmd160(inString);
 	else
 		output = inString;
 	return output;
