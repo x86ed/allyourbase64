@@ -37,7 +37,7 @@ var encodeBase = function(inString, base){
                 output +=  pad(inString.charCodeAt(i).toString(base), base) + " ";
 	else if (base == 64)
 		output = btoa(inString);
-  else if (base == 641)
+  else if (base == 641){
 		var ttype = inString.substring(0,16);
 		 if (imgType.search('JFIF') > -1) {
 		  imgType = "jpeg";
@@ -53,10 +53,22 @@ var encodeBase = function(inString, base){
     }else{
       output = "";
     }
-	else if (base == 80)
+  //uri section
+  }else if (base == 80)
 		output = encodeURI(inString);
 	else if (base == 443)
 		output = encodeURIComponent(inString);
+  //hash section
+  else if (base == 555)
+    output = rstr_md5(inString);
+  else if (base == 111)
+    output = rstr_sha1(inString);
+  else if (base == 512)
+    output = rstr_sha512(inString);
+  else if (base == 320)
+    output = crc32(inString);
+  else if (base == 160)
+    output = rstr_rmd160(inString);
 	else
 		output = inString;
 	return output;
