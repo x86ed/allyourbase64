@@ -63,6 +63,8 @@ var encodeBase = function(inString, base){
     output = hex_md5(inString);
   else if (base == 111)
     output = hex_sha1(inString);
+  else if (base == 256)
+    output = hex_sha256(inString);
   else if (base == 512)
     output = hex_sha512(inString);
   else if (base == 320)
