@@ -52,7 +52,8 @@ div#bs-floatOver{
 label span.bs-button{
   width:20px;
   height:20px;
-  top:2px;
+  top:5px;
+  z-index:5;
   float:right;
   position:relative;
   display:block;
@@ -63,7 +64,7 @@ label span.bs-button{
 
 label span.bs-button:hover{
   height:22px;
-  top:0px;
+  top:3px;
 }
 
 label span.bs-clip,
@@ -132,7 +133,7 @@ div.bs-left{
 	border-bottom-left-radius: 4px;
 	position:relative;
 	float:left;
-	height:449px;
+	height:471px;
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
 
@@ -149,12 +150,12 @@ div.bs-right{
 	border-top-right-radius: 4px;
 	position:relative;
 	float:right;
-	height:449px;
+	height:471px;
   background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
 
 div.bs-bottomPad{
-  min-height:419px;
+  min-height:458px;
   padding-bottom:5px;
 }
 
