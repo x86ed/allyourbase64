@@ -2,7 +2,7 @@ body {
 	font-family: 'VT323', arial, serif;
 	border:1px solid #14080a;
 	-webkit-border-radius: 4px;
-	overflow:auto;
+	overflow:hidden;
   min-width:480px;
 	margin:0;
 	padding:0;
