@@ -133,7 +133,7 @@ div.bs-left{
 	border-bottom-left-radius: 4px;
 	position:relative;
 	float:left;
-	height:471px;
+	height:450px;
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
 
@@ -150,7 +150,7 @@ div.bs-right{
 	border-top-right-radius: 4px;
 	position:relative;
 	float:right;
-	height:471px;
+	height:450px;
   background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.06, rgb(218,74,2)),color-stop(0.69, rgb(246,182,32)),color-stop(0.96, rgb(254,248,228)));
 }
 
