@@ -156,7 +156,7 @@ $(function() {
    $('body').css('height',$('body').height());
    $("div.bs-wordBubble").fadeOut();
    $(".js-bs-mutable").fadeOut();
-   $("#bs-floatOver").animate({ top: 10, left:6, width: $('body').width() - 4 +"px", height: $('body').height() -4 +"px" },200,function(){
+   $("#bs-floatOver").animate({ top: "10px", left:"2px", width: $('body').width() - 4 +"px", height: $('body').height() -4 +"px" },200,function(){
       $('span.bs-maximize.bs-min').click(function(e){
 	e.preventDefault();
         $("#" + thisID).val(encodeBase($('#bs-floatField').val(),$("#" + thisID).attr('rel')));
