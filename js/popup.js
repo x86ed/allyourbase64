@@ -153,9 +153,10 @@ $(function() {
     var thisID= $(this).attr('rel');
     var fieldVal= encodeBase($("#"+ thisID).val(),$("#" + thisID).attr('rel'));
     $('body').append('<div id="bs-floatOver" style="top:' + $thisOffset.top  + 'px;left:' + $thisOffset.left  + 'px" ><label for="bs-floatField">' + thisID.replace('bs-','') + '<!--<span class="bs-button"><span class="bs-clip" id="bs-clipStr" rel="bs-string"></span></span>--><span class="bs-button"><span class="bs-maximize bs-min" rel="' + thisID + '"></span></span></label><textarea id="bs-floatField" rel="99" rows="33">' + fieldVal  + '</textarea></div>');
+   $('body').css('height',$('body').height());
    $("div.bs-wordBubble").fadeOut();
    $(".js-bs-mutable").fadeOut();
-   $("#bs-floatOver").animate({ top: 0, left:0, width: $('body').width() - 4 +"px", height: $('body').height() -4 +"px" },200,function(){
+   $("#bs-floatOver").animate({ top: 10, left:6, width: $('body').width() - 4 +"px", height: $('body').height() -4 +"px" },200,function(){
       $('span.bs-maximize.bs-min').click(function(e){
 	e.preventDefault();
         $("#" + thisID).val(encodeBase($('#bs-floatField').val(),$("#" + thisID).attr('rel')));
